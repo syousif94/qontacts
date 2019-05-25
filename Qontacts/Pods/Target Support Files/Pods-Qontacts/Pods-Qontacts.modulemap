@@ -1,0 +1,6 @@
+framework module Pods_Qontacts {
+  umbrella header "Pods-Qontacts-umbrella.h"
+
+  export *
+  module * { export * }
+}

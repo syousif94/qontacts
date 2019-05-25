@@ -1,0 +1,100 @@
+PODS:
+  - DeepDiff (2.2.0)
+  - FLAnimatedImage (1.0.12)
+  - FlexLayout (1.3.14)
+  - GRDB.swift (3.7.0)
+  - InputMask (4.1.1)
+  - KeychainSwift (15.0.0)
+  - Parchment (1.6.0)
+  - PINCache (2.3)
+  - PinLayout (1.8.7)
+  - PINRemoteImage (2.1.4):
+    - PINRemoteImage/FLAnimatedImage (= 2.1.4)
+  - PINRemoteImage/Core (2.1.4):
+    - PINCache (>= 2.1)
+  - PINRemoteImage/FLAnimatedImage (2.1.4):
+    - FLAnimatedImage (>= 1.0)
+    - PINRemoteImage/Core
+  - QRCode (2.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxGRDB (0.13.0):
+    - RxGRDB/default (= 0.13.0)
+    - RxSwift (~> 4.0)
+  - RxGRDB/default (0.13.0):
+    - GRDB.swift (~> 3.5)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.5.0)
+  - Starscream (3.1.0)
+  - SwiftyContacts (3.0.11):
+    - SwiftyContacts/Core (= 3.0.11)
+  - SwiftyContacts/Core (3.0.11)
+  - SwiftyJSON (5.0.0)
+  - Then (2.4.0)
+  - UIColor_Hex_Swift (5.1.0)
+
+DEPENDENCIES:
+  - DeepDiff
+  - FlexLayout
+  - GRDB.swift
+  - InputMask
+  - KeychainSwift
+  - Parchment
+  - PinLayout
+  - PINRemoteImage
+  - QRCode
+  - RxCocoa (~> 4)
+  - RxGRDB
+  - RxSwift (~> 4)
+  - Starscream (~> 3.1.0)
+  - SwiftyContacts
+  - SwiftyJSON
+  - Then
+  - UIColor_Hex_Swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DeepDiff
+    - FLAnimatedImage
+    - FlexLayout
+    - GRDB.swift
+    - InputMask
+    - KeychainSwift
+    - Parchment
+    - PINCache
+    - PinLayout
+    - PINRemoteImage
+    - QRCode
+    - RxCocoa
+    - RxGRDB
+    - RxSwift
+    - Starscream
+    - SwiftyContacts
+    - SwiftyJSON
+    - Then
+    - UIColor_Hex_Swift
+
+SPEC CHECKSUMS:
+  DeepDiff: e329bc46dd14ca788d8ec08d34420799ba1d77f2
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FlexLayout: 6e25c1c4aa373629458b4639f1359f46c4160e28
+  GRDB.swift: 51cc9e57ae8ff7083a9d674c97925aa1de06aac5
+  InputMask: 88c7c1432816333e884e647f8c2d69485ba525d1
+  KeychainSwift: c6fc018d287804faf1ce3f258a1e51a7178c8382
+  Parchment: d3a7b367c529fa6ef51aa43f5717a7ff36d4b1f5
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
+  PinLayout: a0722a5c8f0e0168a9c091ffe4930dabf0c8582c
+  PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
+  QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxGRDB: 4e2686821ae8f8507c6d6d00d3083ae2df84fea3
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  Starscream: 08172b481e145289c4930cb567230fb55897cfa4
+  SwiftyContacts: 3b38d400d2480e8a2323194f3f8fcf6b317d8147
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
+  UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
+
+PODFILE CHECKSUM: 9774cdd2aae4edc5677bb0cfaa561964b574fe42
+
+COCOAPODS: 1.7.0.beta.3

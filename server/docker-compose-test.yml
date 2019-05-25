@@ -1,0 +1,47 @@
+version: "3"
+services:
+  api:
+    build: ./api
+    volumes:
+      - ./api:/app
+      - $GOPATH/pkg/mod/cache:/go/pkg/mod/cache
+    working_dir: /app
+    env_file:
+      - .env
+    ports:
+      - 5000:5000
+    networks:
+      - qontacts-backend
+    depends_on:
+      - roach-ui
+  roach-ui:
+    image: cockroachdb/cockroach
+    command: start --insecure
+    ports:
+      - 8080:8080
+    networks:
+      - qontacts-backend
+  roach-one:
+    image: cockroachdb/cockroach
+    command: start --insecure --join=roach-ui
+    networks:
+      - qontacts-backend
+  roach-two:
+    image: cockroachdb/cockroach
+    command: start --insecure --join=roach-ui
+    networks:
+      - qontacts-backend
+  pgweb:
+    restart: always
+    image: sosedoff/pgweb
+    ports:
+      - 8081:8081
+    environment:
+      - DATABASE_URL=postgresql://root@roach-ui:26257/?sslmode=disable
+    depends_on:
+      - roach-ui
+    networks:
+      - qontacts-backend
+
+networks:
+  qontacts-backend:

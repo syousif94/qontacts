@@ -1,0 +1,49 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+target 'Qontacts' do
+  use_frameworks!
+
+  # Pods for Qontacts
+
+  pod 'PinLayout'
+  pod 'FlexLayout'
+  pod 'SwiftyJSON'
+  pod 'UIColor_Hex_Swift'
+  pod 'PINRemoteImage'
+  pod 'RxSwift', '~> 4'
+  pod 'RxCocoa', '~> 4'
+  pod 'KeychainSwift'
+  pod 'Then'
+  pod 'QRCode'
+  pod 'DeepDiff'
+  pod 'GRDB.swift'
+  pod 'RxGRDB'
+  pod 'Parchment'
+  pod 'InputMask'
+  pod 'SwiftyContacts'
+  pod 'Starscream', '~> 3.1.0'
+
+  my_project_pods_swift_versions = Hash[
+    "4.2", ["GRDB.swift", "RxGRDB", "QRCode", "InputMask"]
+  ]
+
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      setup_all_swift_versions(target, my_project_pods_swift_versions)
+    end
+  end
+
+end
+
+def setup_all_swift_versions(target, pods_swift_versions)
+  pods_swift_versions.each { |swift_version, pods| setup_swift_version(target, pods, swift_version) }
+end
+
+def setup_swift_version(target, pods, swift_version)
+  if pods.any? { |pod| target.name.include?(pod) }
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = swift_version
+    end
+  end
+end
